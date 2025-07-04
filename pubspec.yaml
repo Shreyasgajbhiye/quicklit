@@ -1,0 +1,33 @@
+name: quicklit
+description: A blazing-fast Flutter toolkit with essential utilities and UI components for hackathon-ready apps.
+version: 0.0.1
+
+homepage: https://github.com/shreyasgajbhiye/quicklit
+repository: https://github.com/shreyasgajbhiye/quicklit
+issue_tracker: https://github.com/shreyasgajbhiye/quicklit/issues
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+executables:
+  model_gen: model_gen
+
+dependencies:
+  flutter:
+    sdk: flutter
+  connectivity_plus: ^6.0.3
+  shared_preferences: ^2.2.3
+  firebase_auth: ^5.1.0
+  firebase_core: ^3.15.1
+  provider: ^6.1.2
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.9
+  json_serializable: ^6.8.0
+
+flutter:
+  uses-material-design: true
