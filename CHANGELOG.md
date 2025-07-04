@@ -9,3 +9,7 @@
 - Stopwatch/timer utilities
 - `isDebug()` and `isRelease()` environment helpers
 - CLI tool to generate models from JSON (with @JsonSerializable support)
+
+### Fixed
+- Removed unused imports
+- Fixed pubspec `executables:` validation
