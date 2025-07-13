@@ -2,7 +2,7 @@ class CliHelper {
   /// Show usage information
   static void showUsage() {
     print('''
-📦 Quicklit CLI Tool v1.0.0
+📦 Quicklit CLI Tool v1.1.0
 
 Usage:
   dart run quicklit:model_gen <json_file> --class <ClassName>
@@ -74,7 +74,7 @@ Dependencies:
 
   /// Show version information
   static void showVersion() {
-    print('📦 Quicklit CLI Tool v1.0.0');
+    print('📦 Quicklit CLI Tool v1.1.0');
     print('🚀 A blazing-fast Flutter toolkit with flexible auth');
     print('🔗 https://github.com/shreyasgajbhiye/quicklit');
     print('');
