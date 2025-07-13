@@ -366,3 +366,238 @@ If you find any issues or have suggestions, please file an issue on the [GitHub 
 
 ---
 
+# 🔥 Quicklit
+
+[![pub package](https://img.shields.io/pub/v/quicklit.svg)](https://pub.dev/packages/quicklit)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+**Quicklit** is a blazing-fast Flutter toolkit built for hackathon-ready apps.  
+It bundles essential UI components, utility helpers, a CLI-powered model generator, and a complete auth boilerplate generator — all in one package.
+
+---
+
+## ✨ Features
+
+- ✅ Prebuilt **Login & Register** UI (Firebase & API-ready)
+- ✅ Dark/Light mode toggle widget
+- ✅ Internet connectivity checker
+- ✅ Snackbar, dialog, and toast utilities
+- ✅ Local storage helper using `SharedPreferences`
+- ✅ Stopwatch & timer utilities
+- ✅ `isDebug()` and `isRelease()` environment helpers
+- ✅ CLI-powered **JSON → Dart model generator**
+- ✅ 🔐 **Auth boilerplate generator (BLoC)** via CLI
+- ✅ Supports **Firebase** and **REST API** authentication
+
+---
+
+## 📦 Installation
+
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  quicklit: ^0.0.1
+```
+
+Then run:
+
+```bash
+flutter pub get
+```
+
+---
+
+## 🚀 CLI Usage (v0.1.1)
+
+The `Quicklit CLI Tool v0.1.1` supports model generation, auth boilerplate scaffolding, and dependency setup.
+
+### 🔧 Commands
+
+```bash
+dart run quicklit:model_gen <json_file> --class <ClassName>
+dart run quicklit:model_gen --get-login [--firebase | --api]
+dart run quicklit:model_gen --install-deps
+```
+
+### 🧪 Examples
+
+#### 📄 JSON Model Generation
+
+```bash
+dart run quicklit:model_gen user.json --class UserModel
+```
+
+#### 🔐 Auth Boilerplate (BLoC-based)
+
+```bash
+dart run quicklit:model_gen --get-login --firebase
+dart run quicklit:model_gen --get-login --api
+dart run quicklit:model_gen --get-login   # Prompts to choose
+```
+
+#### ⚙️ Install Dependencies
+
+```bash
+dart run quicklit:model_gen --install-deps
+```
+
+---
+
+## 🔐 Auth Providers
+
+### 🌐 API Auth
+
+- RESTful API login/register
+- JWT token support
+- Customizable endpoints
+- Dio client with interceptors
+
+### 🔥 Firebase Auth
+
+- Firebase Auth SDK integration
+- Email/password login/register
+- Built-in error handling
+- Works with `google-services.json` / `GoogleService-Info.plist`
+
+---
+
+## 📁 Auth Boilerplate Structure
+
+```
+lib/
+├── pages/auth/
+│   ├── login.dart
+│   └── register.dart
+├── bloc/auth/
+│   ├── auth_bloc.dart
+│   ├── auth_event.dart
+│   └── auth_state.dart
+├── services/              # API only
+│   └── auth_service.dart
+└── models/                # API only
+    └── user_model.dart
+```
+
+---
+
+## 🎨 Flutter Usage
+
+### ✅ Auth Screens
+
+```dart
+import 'package:quicklit/quicklit.dart';
+
+void main() {
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: QuicklitLoginPage(), // or QuicklitRegisterPage()
+  ));
+}
+```
+
+### 🎨 Theme Toggle
+
+```dart
+QuicklitThemeToggle()
+```
+
+### 🌐 Internet Connection Checker
+
+```dart
+QuicklitConnectionChecker(
+  onOnline: () => print('Connected'),
+  onOffline: () => print('Disconnected'),
+)
+```
+
+---
+
+## 🛠 Utility Functions
+
+### 🗃 Local Storage
+
+```dart
+await QuicklitStorage.saveString('username', 'shreyash');
+String? name = await QuicklitStorage.getString('username');
+```
+
+### 🕒 Timer & Stopwatch
+
+```dart
+final stopwatch = QuicklitStopwatch();
+stopwatch.start();
+await Future.delayed(Duration(seconds: 2));
+stopwatch.stop();
+print(stopwatch.elapsed);
+```
+
+```dart
+QuicklitTimer.delay(Duration(seconds: 3), () {
+  print('Executed after 3 seconds');
+});
+```
+
+### 🧪 Environment Helpers
+
+```dart
+if (QuicklitUtils.isDebug()) {
+  print('Debug mode');
+}
+```
+
+---
+
+## 📚 Dependencies
+
+### Base
+- `connectivity_plus`
+- `shared_preferences`
+- `provider`
+- `flutter_bloc`
+- `equatable`
+- `http`
+- `json_annotation`
+- `build_runner`
+- `json_serializable`
+
+### Firebase
+- `firebase_auth`
+- `firebase_core`
+
+### API
+- `dio`
+- `pretty_dio_logger`
+
+---
+
+## 🎯 Full Example App
+
+See `/example/` directory for complete usage.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions:
+
+1. Fork the repo  
+2. Create your branch (`git checkout -b feature/new-feature`)  
+3. Commit your changes (`git commit -m 'Add something'`)  
+4. Push (`git push origin feature/new-feature`)  
+5. Open a Pull Request  
+
+---
+
+## 📄 License
+
+MIT License – see [LICENSE](LICENSE)
+
+---
+
+## 🔗 Links
+
+- GitHub: [shreyasgajbhiye/quicklit](https://github.com/shreyasgajbhiye/quicklit)
+- Pub.dev: [Quicklit Package](https://pub.dev/packages/quicklit)
+
+---
