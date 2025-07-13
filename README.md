@@ -19,6 +19,29 @@ It bundles essential UI components, utility helpers, and a CLI-powered model gen
 - ✅ `isDebug()` and `isRelease()` environment helpers
 - ✅ CLI-powered **JSON → Dart model generator** (with `.g.dart` support)
 
+  Usage:
+    dart run quicklit:model_gen <json_file> --class <ClassName>
+    dart run quicklit:model_gen --get-login [--firebase|--api]
+
+  Options:
+    --help, -h      Show this help message
+    --version       Show version information
+    --install-deps  Force install/reinstall base dependencies
+    --get-login     Generate complete auth boilerplate with BLoC
+    --firebase      Use Firebase Authentication (with --get-login)
+    --api           Use API/REST Authentication (with --get-login) [default]
+
+  Examples:
+    # JSON Model Generation
+    dart run quicklit:model_gen user.json --class UserModel
+    dart run quicklit:model_gen data.json --class DataModel
+    
+    # Auth Boilerplate Generation
+    dart run quicklit:model_gen --get-login --firebase
+    dart run quicklit:model_gen --get-login --api
+    dart run quicklit:model_gen --get-login  # Prompts for choice
+    
+
 ---
 
 ## 📦 Installation
