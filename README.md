@@ -27,7 +27,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  quicklit: ^0.0.1
+  quicklit: ^0.1.1
 ```
 
 Then run:
