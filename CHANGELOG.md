@@ -1,4 +1,4 @@
-## [0.1.1] - 2025-07-13
+## [1.0.0] - 2025-07-13
 
 ### Added
 - CLI support for generating full **auth boilerplate** using `--get-login`

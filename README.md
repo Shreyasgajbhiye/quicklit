@@ -27,7 +27,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  quicklit: ^0.1.1
+  quicklit: ^1.0.0
 ```
 
 Then run:
@@ -408,9 +408,9 @@ flutter pub get
 
 ---
 
-## 🚀 CLI Usage (v0.1.1)
+## 🚀 CLI Usage (v1.0.0)
 
-The `Quicklit CLI Tool v0.1.1` supports model generation, auth boilerplate scaffolding, and dependency setup.
+The `Quicklit CLI Tool v1.0.0` supports model generation, auth boilerplate scaffolding, and dependency setup.
 
 ### 🔧 Commands
 

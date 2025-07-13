@@ -255,7 +255,7 @@
 
 
 
-// v0.1.1
+// v1.0.0
 // bin/quicklit.dart
 import 'dart:convert';
 import 'dart:io';
@@ -299,7 +299,7 @@ Future<void> _handleCliCommands(List<String> args) async {
 }
 
 Future<void> _handleAuthGeneration(List<String> args) async {
-  print('🚀 Generating Quicklit Auth Boilerplate v0.1.1...');
+  print('🚀 Generating Quicklit Auth Boilerplate v1.0.0...');
   
   auth_provider.AuthProvider provider = auth_provider.AuthProvider.api;
   
